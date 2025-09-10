@@ -44,5 +44,5 @@ String translate = 'Translate';
 String light = 'light';
 String attentionArabic = '*تنبيه*';
 String attentionEnglish = '*Attention*';
-String nameSurahHeardArabic='*أسماء السور المسموعة*';
-String nameSurahHeardEnglish='*Names of the Listened Surahs*';
+String nameSurahHeardArabic = '*أسماء السور المسموعة*';
+String nameSurahHeardEnglish = '*Names of the Listened Surahs*';

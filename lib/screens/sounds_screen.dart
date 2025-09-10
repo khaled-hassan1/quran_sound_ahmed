@@ -9,9 +9,10 @@ import '../provider/theme_mode_provider.dart';
 import '../widgets/container_buttons.dart';
 import '../widgets/sound_list_widget.dart';
 
+@immutable
 class SoundScreen extends StatelessWidget {
   static String route = '/sound-screen';
-  const SoundScreen({Key? key}) : super(key: key);
+  const SoundScreen({super.key});
   @override
   Widget build(BuildContext context) {
     final providerAudio = Provider.of<AudioPlayerProvider>(context);

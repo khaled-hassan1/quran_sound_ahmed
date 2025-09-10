@@ -13,18 +13,13 @@ class AppSettings {
   static const TextAlign textAlignCenter = TextAlign.center;
   static TextStyle copyWith =
       AppSettings.textStyle2.copyWith(fontSize: 12.50, fontFamily: 'Kufam');
-  static const List<Color> colors1 = [
-    Colors.white10,
-    Colors.white30
-  ];
+  static const List<Color> colors1 = [Colors.white10, Colors.white30];
   static List<Color> colors2 = [
     Colors.green.shade500,
     Colors.greenAccent.shade700
   ];
 
-  static List<Color> colorizeColorsLight = [
-    Colors.greenAccent.shade700
-  ];
+  static List<Color> colorizeColorsLight = [Colors.greenAccent.shade700];
 
   static List<Color> colorizeColorsDark = [
     AppSettings.white,
@@ -33,7 +28,7 @@ class AppSettings {
 
   static List<Color> colorizeColorsDark2 = [
     // AppSettings.white,
-Colors.yellowAccent.shade400
+    Colors.yellowAccent.shade400
   ];
 
   static const TextStyle colorizeTextStyle = TextStyle(
@@ -46,7 +41,7 @@ Colors.yellowAccent.shade400
   static const Color white70 = Colors.white70;
   static const Color color = Color.fromARGB(255, 241, 238, 238);
   static const Color transparent = Colors.transparent;
-  static  Color green = Colors.green.shade900;
+  static Color green = Colors.green.shade900;
   static const double iconSize = 30;
   static const TextAlign left = TextAlign.left;
   static const TextAlign right = TextAlign.right;

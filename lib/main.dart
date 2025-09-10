@@ -11,11 +11,13 @@ import '../provider/provider_sound.dart';
 import '../screens/sounds_screen.dart';
 import '../provider/theme_mode_provider.dart';
 import '../screens/splash_screen.dart';
+import 'ads/open_ad.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  MobileAds.instance.initialize();
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  await MobileAds.instance.initialize();
+  await AppOpenAdManager().loadAd();
+  await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
   runApp(
     MultiProvider(

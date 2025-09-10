@@ -5,6 +5,7 @@ import '../ads/ads_initial.dart';
 import '../screens/sounds_screen.dart';
 import '../widgets/app_settings.dart';
 
+@immutable
 class SplashScreen extends StatefulWidget {
   static String route = '/splash-screen';
 
@@ -19,10 +20,11 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
         overlays: SystemUiOverlay.values);
-    Future.delayed(
-      const Duration(seconds: 2),
-      () => Navigator.of(context).pushReplacementNamed(SoundScreen.route),
-    );
+    Future.delayed(const Duration(seconds: 2), () {
+      if (mounted) {
+        Navigator.of(context).pushReplacementNamed(SoundScreen.route);
+      }
+    });
     Future.delayed(const Duration(seconds: 5), () {
       Ads().loadAd();
     });
@@ -44,7 +46,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.blue.shade100.withOpacity(0),
+        color: Colors.blue.shade100.withValues(alpha: 0),
         width: double.infinity,
         height: double.infinity,
         child: Center(

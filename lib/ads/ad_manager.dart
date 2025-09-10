@@ -15,4 +15,8 @@ class AdManager {
   // static String nativeAds = isTest
   //     ? 'ca-app-pub-3940256099942544/2247696110' //test
   //     : 'ca-app-pub-4572535261538266/2398932005'; //real
+
+  static String appOpenAd = isTest
+      ? 'ca-app-pub-3940256099942544/9257395921' //test
+      : 'ca-app-pub-4572535261538266/2699502605'; //real
 }
